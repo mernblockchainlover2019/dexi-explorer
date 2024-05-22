@@ -45,7 +45,7 @@ function Home(props: PropsType) {
   return status ? (
     <Error />
   ) : (
-    <Layout title="Rango Exchange Explorer">
+    <Layout title="Dexifier Exchange Explorer">
       <div>
         <div className="flex flex-col items-center relative bg-baseBackground h-[595px] md:h-[662px]">
           <SearchBox />
@@ -67,7 +67,7 @@ function Home(props: PropsType) {
                     Recent Swaps
                   </h2>
                   <p className="text-12 md:text-16 text-neutral-800">
-                    Latest 25 swaps on Rango
+                    Latest 20 swaps on Dexifier
                   </p>
                 </div>
                 <div className="flex items-center pt-10">

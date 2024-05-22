@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import IconStatus from 'components/common/IconStatus';
 import { TransactionURLProps } from './SwapSteps.type';
 import { SwapStatus } from 'types';
@@ -25,9 +25,8 @@ function TransactionURL(props: TransactionURLProps) {
         const transactionStatus: SwapStatus =
           index === explorerUrls.length - 1 ? status : 'success';
         return (
-          <>
+          <Fragment key={url}>
             <TransactionURLMobileItem
-              key={url}
               description={overrideDescription}
               transactionStatus={transactionStatus}
               url={url}
@@ -54,7 +53,7 @@ function TransactionURL(props: TransactionURLProps) {
                 </Tooltip>
               </div>
             </div>
-          </>
+          </Fragment>
         );
       })}
     </>

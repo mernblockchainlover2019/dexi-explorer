@@ -21,12 +21,14 @@ function DesktopNavbar(props: DeviceProps) {
       {renderChildren ? (
         <>
           <div className="flex justify-center	items-center gap-9">
-            <Link className="relative w-[3.8rem] md:w-[7.7rem]" href="/">
-              <Image
-                src={theme === 'dark' ? coloredLogo : rangoLogo}
-                alt="Rango logo"
-                layout="responsive"
-              />
+            <Link className="relative max-w-[3.8rem] md:w-[7.7rem]" href="/">
+              <div className='flex min-h-[2rem] gap-4'>
+                <Image 
+                  src={theme === 'dark' ? coloredLogo : rangoLogo}
+                  alt="Dexi logo"
+                />
+                <span className="text-[26px]">Dexifer</span>
+              </div>
             </Link>
             {hasSearchInput && (
               <div className="w-[310px]">
@@ -45,13 +47,11 @@ function DesktopNavbar(props: DeviceProps) {
                 <li
                   className={`text-18 font-medium hover:text-secondary-500 
                   ${index !== links.length - 1 ? 'mr-60' : ''}
-                   ${
-                     theme === 'dark'
-                       ? 'text-primary-500'
-                       : 'text-baseForeground'
-                   } leading-snug ${
-                     showSubMenu === link.id ? 'text-secondary-500' : ''
-                   }`}
+                   ${theme === 'dark'
+                      ? 'text-primary-500'
+                      : 'text-baseForeground'
+                    } leading-snug ${showSubMenu === link.id ? 'text-secondary-500' : ''
+                    }`}
                   key={index}
                   onMouseOver={() => setShowSubMenu(link.id)}>
                   {link.type === 'link' ? (

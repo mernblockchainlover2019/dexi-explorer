@@ -49,7 +49,7 @@ function MobileMenu(props: MobileMenuProps) {
             <nav className="w-full">
               <div className="flex w-full items-center justify-between pb-6">
                 <Link className="relative w-24" href="/">
-                  <Image src={rangoLogo} alt="Rango logo" layout="responsive" />
+                  <Image src={rangoLogo} alt="Rango logo" />
                 </Link>
                 <div />
               </div>

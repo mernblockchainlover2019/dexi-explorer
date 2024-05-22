@@ -64,7 +64,6 @@ function SwapDetailMobileToken(props: SwapDetailItem) {
               src={rango}
               className="!w-[18px] !h-[18px]"
               alt="Rango logo"
-              layout="responsive"
             />
             <div className="bg-white absolute p-0.5 rounded-full -right-1.5	-bottom-1.5">
               <SearchIcon

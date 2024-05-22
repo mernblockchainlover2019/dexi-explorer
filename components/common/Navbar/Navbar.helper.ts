@@ -35,25 +35,25 @@ export const links: Array<LinkTypes | MenuTypes> = [
     subMenu: [
       {
         title: 'API/SDK',
-        location: 'https://rango-api.readme.io/reference/meta',
+        location: '#',
         openInNewTab: true,
         icon: ApiManagementIcon,
       },
       {
         title: 'Widget',
-        location: 'https://docs.rango.exchange/widget-integration/overview',
+        location: '#',
         openInNewTab: true,
         icon: WidgetIcon,
       },
       {
         title: 'Affiliate',
-        location: 'https://rango.exchange/affiliate',
+        location: '#',
         openInNewTab: true,
         icon: AffiliateIcon,
       },
       {
         title: 'Docs',
-        location: 'https://docs.rango.exchange',
+        location: '#',
         openInNewTab: true,
         icon: DocsIcon,
       },

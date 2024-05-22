@@ -10,7 +10,7 @@ import { ListItemProps } from './Footer.type';
 
 export const products: ListItemProps[] = [
   {
-    location: 'https://app.rango.exchange/',
+    location: '#',
     title: 'DApp',
     openInNewTab: true,
   },
@@ -33,22 +33,22 @@ export const products: ListItemProps[] = [
 
 export const documentation: ListItemProps[] = [
   {
-    location: 'https://docs.rango.exchange/integration-quick-start/overview',
+    location: '#',
     title: 'SDK Docs',
     openInNewTab: true,
   },
   {
-    location: 'https://rango-api.readme.io/reference',
+    location: '#',
     title: 'API Reference',
     openInNewTab: true,
   },
   {
-    location: 'https://docs.rango.exchange/widget-integration/overview',
+    location: '#',
     title: 'Widget Docs',
     openInNewTab: true,
   },
   {
-    location: 'https://playground.rango.exchange/',
+    location: '#',
     title: 'Widget Playground',
     openInNewTab: true,
   },
@@ -56,38 +56,38 @@ export const documentation: ListItemProps[] = [
 
 export const socialMedia: ListItemProps[] = [
   {
-    location: 'https://discord.com/invite/q3EngGyTrZ',
+    location: '#',
     title: 'Discord',
     openInNewTab: true,
     icon: DiscordIcon,
   },
   {
-    location: 'https://twitter.com/RangoExchange',
+    location: '#',
     title: 'Twitter',
     openInNewTab: true,
     icon: TwitterIcon,
   },
   {
-    location: 'https://t.me/rangoexchange',
+    location: '#',
     title: 'Telegram',
     openInNewTab: true,
     icon: TelegramIcon,
   },
   {
-    location: 'https://medium.com/@rangoexchange',
+    location: '#',
     title: 'Medium',
     openInNewTab: true,
     icon: MediumIcon,
   },
 
   {
-    location: 'https://www.youtube.com/@rangoexchange',
+    location: '#',
     title: 'YouTube',
     openInNewTab: true,
     icon: YoutubeIcon,
   },
   {
-    location: 'https://github.com/rango-exchange',
+    location: '#',
     title: 'GitHub',
     openInNewTab: true,
     icon: GithubIcon,

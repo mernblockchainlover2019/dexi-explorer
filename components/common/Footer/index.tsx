@@ -16,7 +16,7 @@ function Footer() {
           </div>
           <LinkButton
             className="mt-35 md:mt-[60px] w-[257px]"
-            href="https://app.rango.exchange/">
+            href="#">
             Open App
           </LinkButton>
         </div>
@@ -26,10 +26,10 @@ function Footer() {
           <div className="mx-auto flex container  flex-col justify-between px-30 md:flex-row md:px-0">
             <div className="mb-10 text-left md:mb-0 md:max-w-[19.4375rem]">
               <h3 className="mb-3.5 text-left text-16 md:text-22	font-medium text-baseForeground md:text-[1.1rem] md:leading-[1.4rem]">
-                About Rango
+                About Dexifier
               </h3>
               <p className="w-full text-12 md:text-16 font-medium leading-[1.5rem] text-neutral-200	">
-                Rango is a cutting-edge routing and aggregation protocol for all
+                Dexifier provides cutting-edge routing and aggregation protocol for all
                 cross-chain and on-chain swaps, aggregating bridges and DEXs in
                 crypto world. You can swap native assets like Bitcoin, Ethereum,
                 Matic, ... to each other in a decentralized manner.
@@ -72,7 +72,7 @@ function Footer() {
       </div>
 
       <span className="w-full bg-neutral-500 p-2.5 text-center text-10 md:text-16 text-baseForeground md:text-base md:leading-6">
-        Copyright © 2024 Rango Exchange. All rights reserved.
+        Copyright © 2024 Dexifier Exchange. All rights reserved.
       </span>
     </footer>
   );

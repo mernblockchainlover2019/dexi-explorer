@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { SwapStepItemExpandedProps } from './SwapSteps.type';
 import { columns } from './SwapSteps.helper';
 
@@ -33,9 +33,8 @@ function SwapStepItemExpanded(props: SwapStepItemExpandedProps) {
           // Explains the reason for the step failure (if the step has failed)
           if (title === 'Failure Info' && !step.failureReason) return;
           return (
-            <>
+            <Fragment key={`column-${id}`}>
               <div
-                key={`column-${id}`}
                 className="flex flex-col md:grid md:grid-cols-7">
                 <div className="text-12 mb-5 md:mb-0 md:text-16 font-medium md:p-16 pl-0 md:col-span-3 text-primary-500 flex items-center">
                   {`${title} : `}
@@ -51,7 +50,7 @@ function SwapStepItemExpanded(props: SwapStepItemExpandedProps) {
               {index !== columns.length - (step.failureReason ? 1 : 2) && (
                 <div className="h-[0.5px] my-10 md:my-0 w-full bg-neutral-300"></div>
               )}
-            </>
+            </Fragment>
           );
         })}
       </div>

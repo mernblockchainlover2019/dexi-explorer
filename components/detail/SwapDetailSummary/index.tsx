@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { DesktopColumns, mobileColumns } from './SwapDetail.helper';
 import { PropsType } from './SwapDetail.type';
 import ButtonCopyIcon from 'components/common/ButtonCopyIcon';
@@ -36,7 +36,7 @@ function SwapDetailSummary(props: PropsType) {
           return (
             DetailValueComponent && (
               <DetailValueComponent
-                key={col.title}
+                key={col.id}
                 column={col}
                 details={details}
               />
@@ -49,8 +49,8 @@ function SwapDetailSummary(props: PropsType) {
           const DetailValueComponent = col.component;
           const { title, id } = col;
           return (
-            <>
-              <div key={`row-${id}`} className="grid grid-cols-5">
+            <Fragment key={`row-${id}`}>
+              <div  className="grid grid-cols-5">
                 <div className="text-16 font-medium p-18 pl-0 col-span-2 text-primary-500 flex items-center">
                   {`${title} : `}
                 </div>
@@ -61,7 +61,7 @@ function SwapDetailSummary(props: PropsType) {
               {index !== DesktopColumns.length - 1 && (
                 <div className="h-[0.5px] w-full bg-neutral-300"></div>
               )}
-            </>
+            </Fragment>
           );
         })}
       </div>

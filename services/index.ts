@@ -19,7 +19,10 @@ export const getSummary = async () =>
     `${API_URL}/scanner/summary?apiKey=${process.env.NEXT_PUBLIC_API_KEY}&token=${process.env.NEXT_PUBLIC_SECRET_KEY}`,
   )
     .then(async (res) => await res.json())
-    .then((data) => data)
+    .then((data) => {
+    console.log("Sumarydata:", data);
+    return data
+    })
     .catch((error) => {
       console.error('There was an error!', error);
       return { hasError: true, status: error };

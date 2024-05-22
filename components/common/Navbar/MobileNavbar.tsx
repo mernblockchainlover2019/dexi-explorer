@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import coloredLogo from 'public/logo.svg';
-import rangoLogo from 'public/logo-with-text.svg';
+import dexifierLogo from 'public/logo-with-text.svg';
 import { DeviceProps } from './Navbar.type';
 import MobileMenu from './MobileMenu';
 import { useEffect, useState } from 'react';
@@ -39,12 +39,14 @@ function MobileNavbar(props: DeviceProps) {
       <div className={'flex items-center justify-between'}>
         {renderChildren ? (
           <>
-            <Link href="/" className="relatives w-[4.75rem] ">
-              <Image
-                src={theme === 'dark' ? coloredLogo : rangoLogo}
-                alt="Rango logo"
-                layout="responsive"
-              />
+            <Link href="/" className="relatives w-[3.75rem] ">
+              <div className='flex min-h-[1.5rem]'>
+                <Image
+                  src={theme === 'dark' ? coloredLogo : dexifierLogo}
+                  alt="dexifier logo"
+                />
+                <span className="text-[18px] font-[500]">Dexifer</span>
+              </div>
             </Link>
 
             <MobileMenu
@@ -56,20 +58,18 @@ function MobileNavbar(props: DeviceProps) {
             <div className="flex h-full">
               {hasSearchInput && (
                 <button
-                  className={`cursor-pointer mr-2.5 focus:outline-none ${
-                    theme === 'dark'
+                  className={`cursor-pointer mr-2.5 focus:outline-none ${theme === 'dark'
                       ? 'text-primary-500'
                       : 'text-baseForeground'
-                  }`}
+                    }`}
                   onClick={setShowSearchInput.bind(null, !showSearchInput)}
                   aria-label="Open the menu">
                   <SearchIcon className="text-white" size="1.5rem" />
                 </button>
               )}
               <button
-                className={`cursor-pointer focus:outline-none ${
-                  theme === 'dark' ? 'text-primary-500' : 'text-baseForeground'
-                }`}
+                className={`cursor-pointer focus:outline-none ${theme === 'dark' ? 'text-primary-500' : 'text-baseForeground'
+                  }`}
                 onClick={setShowMenu.bind(null, !showMenu)}
                 aria-label="Open the menu">
                 <svg
@@ -86,9 +86,8 @@ function MobileNavbar(props: DeviceProps) {
       </div>
       <div className=" overflow-hidden">
         <div
-          className={`transition-height duration-500 ease-in-out ${
-            showSearchInput ? 'h-auto mt-9' : 'h-0 mt-0'
-          }`}
+          className={`transition-height duration-500 ease-in-out ${showSearchInput ? 'h-auto mt-9' : 'h-0 mt-0'
+            }`}
           style={{ maxHeight: showSearchInput ? '100px' : '0px' }}>
           <SearchInput />
         </div>
